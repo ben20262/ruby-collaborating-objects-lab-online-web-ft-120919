@@ -16,4 +16,8 @@ class Song
     file_name = Song.new(clean[1])
     file_name.artist = clean[0]
   end
+
+  def artist_name (artist_name)
+    @artist = Artist.find_or_create_by_name(artist_name)
+  end
 end
