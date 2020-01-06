@@ -1,2 +1,19 @@
 class Song
+  attr_accessor :name, :artist
+  @@all = []
+
+  def initialize (name)
+    @name = name
+    @@all << self
+  end
+
+  def self.all
+    @@all
+  end
+
+  def self.new_by_filename (file_name)
+    clean = file_name.chomp(".mp3").split(" - ")
+    file_name = Song.new(clean[1])
+    file_name.artist = clean[0]
+  end
 end
