@@ -15,7 +15,7 @@ class Song
     clean = file_name.chomp(".mp3").split(" - ")
     name = clean[1]
     name = Song.new(name)
-    @artist = clean[0]
+    name.artist = clean[0]
   end
 
   def artist_name (artist_name)
