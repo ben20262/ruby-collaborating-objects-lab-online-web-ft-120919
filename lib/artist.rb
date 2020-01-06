@@ -25,6 +25,6 @@ class Artist
     end
     found
   end
-    
+
   end
 end
