@@ -17,7 +17,7 @@ class Artist
   end
 
   def self.find_or_create_by_name (name)
-    found = self.select {|singer| singer.name == name}
+    found = self.find {|singer| singer.name == name}
     if found == nil
       name = Artist.new(name)
       found = name
