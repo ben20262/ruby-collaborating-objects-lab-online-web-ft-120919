@@ -18,7 +18,7 @@ class Song
     artist_name = clean[0]
     puts artist_name
     song_name = Song.new(song_name)
-    arts = Artist.find_or_create_by_name(artist_name)
+    arts = Artist.new(artist_name)
     puts arts
   end
 
