@@ -16,6 +16,10 @@ class Artist
     @songs << song
   end
 
+  def songs
+    Song.all.select {|song| song.artist == @name}
+  end
+
   def self.find_or_create_by_name (name)
     found = self.all.select {|singer| singer.name == name}[0]
     if found == nil
