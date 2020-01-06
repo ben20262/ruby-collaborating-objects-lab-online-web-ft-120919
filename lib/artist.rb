@@ -32,4 +32,6 @@ class Artist
   def print_songs
     list = []
     self.songs.each {|song| list << song.name}
+    list
+  end
 end
