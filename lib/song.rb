@@ -18,7 +18,7 @@ class Song
     song_name = Song.new(song_name)
     puts song_name.name
     arts = Artist.new(artist_name)
-    puts arts
+    puts arts.name
   end
 
   def artist_name= (artist_name)
