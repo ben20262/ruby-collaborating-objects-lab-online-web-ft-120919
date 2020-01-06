@@ -13,11 +13,10 @@ class Song
 
   def self.new_by_filename (file_name)
     clean = file_name.chomp(".mp3").split(" - ")
-    puts clean[0]
     song_name = clean[1]
     artist_name = clean[0]
-    puts artist_name
     song_name = Song.new(song_name)
+    puts song_name
     arts = Artist.new(artist_name)
     puts arts
   end
