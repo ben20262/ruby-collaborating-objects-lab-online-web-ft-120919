@@ -18,7 +18,7 @@ class Song
     song_name = Song.new(song_name)
     puts song_name.name
     arts = Artist.new(artist_name)
-    song_name.artist = arts
+    arts.add_song(song_name)
     puts song_name.artist.name
   end
 
