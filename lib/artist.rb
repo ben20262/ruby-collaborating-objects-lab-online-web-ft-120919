@@ -28,4 +28,8 @@ class Artist
     end
     found
   end
+
+  def print_songs
+    list = []
+    self.songs.each {|song| list << song.name}
 end
