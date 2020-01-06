@@ -17,6 +17,7 @@ class Song
     name = Song.new(name)
     puts name
     name.artist = Artist.all.select {|artist| artist.name == clean[0]}[0]
+    puts name
   end
 
   def artist_name= (artist_name)
