@@ -15,6 +15,7 @@ class Song
     clean = file_name.chomp(".mp3").split(" - ")
     inst = Song.new(clean[1])
     inst.name = clean [1]
+    puts inst
     puts Artist.all.select {|singer| singer.name == clean[0]}
   end
 
