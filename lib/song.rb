@@ -16,8 +16,10 @@ class Song
     puts clean[0]
     song_name = clean[1]
     artist_name = clean[0]
+    puts artist_name
     song_name = Song.new(song_name)
-    puts Artist.find_or_create_by_name(artist_name)
+    arts = Artist.find_or_create_by_name(artist_name)
+    puts arts
   end
 
   def artist_name= (artist_name)
