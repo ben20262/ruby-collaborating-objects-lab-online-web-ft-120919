@@ -13,11 +13,11 @@ class Song
 
   def self.new_by_filename (file_name)
     clean = file_name.chomp(".mp3").split(" - ")
+    puts clean
     name = clean[1]
     puts name
     name = Song.new(file_name)
-    file_name.artist = Artist.all.select {|artist| artist.name == clean[0]}[0]
-
+    name.artist = Artist.all.select {|artist| artist.name == clean[0]}[0]
   end
 
   def artist_name= (artist_name)
