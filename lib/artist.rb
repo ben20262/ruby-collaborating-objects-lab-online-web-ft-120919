@@ -16,4 +16,15 @@ class Artist
     track = Song.new(song)
     @songs << track
   end
+
+  def self.find_or_create_by_name (name)
+    found = self.select {|singer| singer.name == name}
+    if found == nil
+      name = Artist.new(name)
+      found = name
+    end
+    found
+  end
+    
+  end
 end
