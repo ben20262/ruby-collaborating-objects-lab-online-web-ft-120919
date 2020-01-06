@@ -20,6 +20,7 @@ class Song
     arts = Artist.new(artist_name)
     arts.add_song(song_name)
     puts song_name.artist.name
+    song_name
   end
 
   def artist_name= (artist_name)
