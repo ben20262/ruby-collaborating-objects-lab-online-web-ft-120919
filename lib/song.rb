@@ -16,8 +16,7 @@ class Song
     song_name = clean[1]
     artist_name = clean[0]
     song_name = Song.new(song_name)
-    Artist.find_or_create_by_name(artist_name)
-    puts Artist.all.select {|singer| singer.name == artist_name}
+    return Artist.find_or_create_by_name(artist_name)
   end
 
   def artist_name= (artist_name)
