@@ -16,7 +16,7 @@ class Song
     puts clean
     name = clean[1]
     puts name
-    name = Song.new(file_name)
+    name = Song.new(name)
     name.artist = Artist.all.select {|artist| artist.name == clean[0]}[0]
   end
 
